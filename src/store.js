@@ -18,7 +18,7 @@ export default new Vuex.Store({
   },
   actions: {
     loadRestaurants: async function({commit}){
-      let response = await server.get('search?cuisines=');
+      let response = await server.get('search');
       commit('SET_RESTAURANTS', response.data.restaurants);
     }
   }
